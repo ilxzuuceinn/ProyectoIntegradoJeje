@@ -1,56 +1,73 @@
+// Arreglo global para almacenar los usuarios registrados
 const usuarios = [];
+
 function registrar() {
-    let userRegistro = document.getElementById("nuevoUsuario").value;
-    let passRegistro = document.getElementById("nuevaContrasena").value;
+    let nuevoUsuario = document.getElementById("nuevoUsuario").value;
+    let nuevaContrasena = document.getElementById("nuevaContrasena").value;
     let mensaje1 = document.getElementById("mensaje1");
-    if (userRegistro === "" || passRegistro === "") {
 
+    // Validar campos vacíos
+    if (nuevoUsuario === "" || nuevaContrasena === "") {
         mensaje1.textContent = "¡Completa todos los campos!";
-
         mensaje1.style.color = "red";
-
-        mensaje.textContent = "¡Completa todos los campos!";
-
-
-        mensaje.style.color = "red";
-
         return;
-
-        I
-
     }
 
     let yaExiste = false;
 
+    // Verificar si el usuario ya existe
     for (let i = 0; i < usuarios.length; i++) {
-
-        if (usuarios[i].usuario === user) {
-
+        if (usuarios[i].usuario === nuevoUsuario) {
             yaExiste = true;
-
             break;
         }
-
     }
+
     if (yaExiste) {
-
         mensaje1.textContent = "¡El nombre de usuario ya está registrado!";
-
         mensaje1.style.color = "red";
-
     } else {
-
+        // Guardar el nuevo usuario en el arreglo
         usuarios.push({
-            usuario: userRegistro,
-            contrasena: passRegistro
+            usuario: nuevoUsuario,
+            contrasena: nuevaContrasena
         });
         mensaje1.textContent = "¡Registro exitoso!";
-        mensaje1.style.color = "purple";
+        mensaje1.style.color = "green";
     }
 }
 
+function iniciarSesion() {
+    let usuarioIngresado = document.getElementById("usuario").value;
+    let contrasenaIngresada = document.getElementById("contrasena").value;
+    let mensaje2 = document.getElementById("mensaje2");
 
-function inicio() {
+    // Validar campos vacíos
+    if (usuarioIngresado === "" || contrasenaIngresada === "") {
+        mensaje2.textContent = "¡Completa todos los campos!";
+        mensaje2.style.color = "red";
+        return;
+    }
+
+    let usuarioEncontrado = false;
+
+    // Buscar coincidencia en el arreglo de usuarios
+    for (let i = 0; i < usuarios.length; i++) {
+        if (usuarios[i].usuario === usuarioIngresado && usuarios[i].contrasena === contrasenaIngresada) {
+            usuarioEncontrado = true;
+            break;
+        }
+    }
+
+    if (usuarioEncontrado) {
+        mensaje2.textContent = "¡Inicio de sesión exitoso! Bienvenido " + usuarioIngresado;
+        mensaje2.style.color = "green";
+    } else {
+        mensaje2.textContent = "¡Usuario o contraseña incorrectos!";
+        mensaje2.style.color = "red";
+    }
+}
+/*
     let usuariosRegistrados = ["Josue", "Mario", "Andy"];
     let contrasenasRegistradas = ["1234", "6767", "7676"];
 
@@ -84,3 +101,4 @@ function inicio() {
         notificacion.style.color = "red";
     }
 }
+*/

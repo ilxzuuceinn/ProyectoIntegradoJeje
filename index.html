@@ -4,8 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página Principal</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="codigo.js"></script>
 </head>
+
 <body>
-    
+
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src=". . ." alt="Logo" width="30" height="24" class="d-inline-block align-text-top">Nombre Creativo
+            </a>
+        </div>
+    </nav>
+
+    <div class="DivPrincipal">
+        <div class="DivRegistro">
+            <h1>Crear cuenta</h1>
+            <center>
+                <p>Cree su cuenta para guardar sus datos :3</p>
+                <input type="text" id="nuevoUsuario" placeholder="Crear usuario">
+                <br>
+                <input type="password" id="nuevaContrasena" placeholder="Crear contraseña">
+                <br>
+                <button onclick="registrar()">Registrarse</button>
+                <p id="mensaje1"></p>
+            </center>
+        </div>
+
+
+        <div class="DivInicioSesion">
+            <h1>Inicio de Sesión</h1>
+            <center>
+                <p>Ingrese su usuario y contraseña para poder continuar :O</p>
+                <input type="text" id="usuario" placeholder="Nombre de usuario">
+                <br>
+                <input type="password" id="contrasena" placeholder="Contraseña">
+                <br>
+                <button onclick="iniciarSesion()">Iniciar Sesión</button>
+                <p id="mensaje2"></p>
+            </center>
+        </div>
+    </div>
+
 </body>
+
 </html>

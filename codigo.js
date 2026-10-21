@@ -65,8 +65,10 @@ function iniciarSesion() {
     if (usuarioEncontrado) {
         mensaje2.textContent = "¡Inicio de sesión exitoso! Bienvenido " + usuarioIngresado;
         mensaje2.style.color = "green";
+        window.location.href = "hola.html";
     } else {
         mensaje2.textContent = "¡Usuario o contraseña incorrectos!";
         mensaje2.style.color = "red";
     }
+    
 }

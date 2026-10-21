@@ -1,3 +1,122 @@
-body{
-    color: antiquewhite;
+body {
+    margin: 0;
+    color: #24332f;
+    background-color: #f4f6f3;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    padding: 18px 32px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e1e7e2;
+    box-shadow: 0 2px 8px #24332f0d;
+}
+
+.navbar-brand {
+    color: #24483d;
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-brand img {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.DivPrincipal {
+    display: grid;
+    
+    gap: 28px;
+    max-width: 748px;
+    margin: 0 auto;
+    padding: 64px 24px;
+}
+
+.DivRegistro,
+.DivInicioSesion {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 32px 28px;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #e1e7e2;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px #24332f12;
+}
+
+h1 {
+    margin: 0 0 14px;
+    color: #24483d;
+    font-size: 25px;
+}
+
+p {
+    color: #687771;
+    font-size: 14px;
+}
+
+input {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 7px 0;
+    padding: 12px 14px;
+    color: #24332f;
+    font-size: 14px;
+    background-color: #fbfcfb;
+    border: 1px solid #d5ded8;
+    border-radius: 7px;
+    
+}
+
+input:focus {
+    background-color: #ffffff;
+    border-color: #527d6d;
+    box-shadow: 0 0 0 3px #527d6d1c;
+}
+
+button {
+    width: 100%;
+    margin-top: 14px;
+    padding: 12px 18px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: #315f50;
+    border: 1px solid #315f50;
+    border-radius: 7px;
+    
+}
+
+button:hover {
+    background-color: #24483d;
+    box-shadow: 0 4px 10px #24483d26;
+}
+
+button:active {
+    background-color: #1d3c33;
+}
+
+#mensaje1,
+#mensaje2 {
+    margin-top: 14px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 16px 20px;
+    }
+
+    .DivPrincipal {
+        grid-template-columns: minmax(0, 420px);
+        gap: 20px;
+        padding: 32px 16px;
+    }
+
+    .DivRegistro,
+    .DivInicioSesion {
+        padding: 28px 22px;
+    }
 }

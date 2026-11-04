@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="principal.css">
+    <script src="codigo.js" defer></script>
+</head>
+<body data-requiere-sesion="true">
+    <nav class="barra">
+        <div class="contenedor">
+            <a class="marca" href="principal.html">
+                <img src="img/wind.png" alt="Logo de WindForce" class="imagenLogo">WindForce
+            </a>
+            <div class="enlaces">
+                <a href="conocenos.html">Conócenos</a>
+                <a href="objetivosymetas.html">Objetivos y metas</a>
+                <button class="salir" onclick="cerrarSesion()">Cerrar sesión</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="portada" aria-label="WindForce">
+            <h1 class="lema">¡Conectando destinos, impulsados por el viento!</h1>
+            <img class="imagen1" src="img/wind.png" alt="Logotipo de WindForce: un aerogenerador y un avión">
+        </section>
+
+        <section class="tarjeta">
+            <h1>¡Bienvenido <span id="usuarioActivo"></span>!</h1>
+            <p>¡Has iniciado sesión!</p>
+            <div class="bloque">
+                <h2>¿Quiénes somos?</h2>
+                <p>WindForce es una empresa relacionada con las aerolíneas y la energía eólica. Buscamos la manera de optimizar al máximo el uso de esta energía con tal de contribuir a un futuro más sostenible.</p>
+                <p>Nos encontramos en varias ubicaciones a nivel nacional e internacional, fomentando el uso de la energía eólica.</p>
+                <a class="boton1" href="conocenos.html">Conócenos</a>
+                <a class="boton1" href="objetivosymetas.html">Objetivos y metas</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
